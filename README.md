@@ -1,2 +1,3 @@
 # SoftUni-Fundamentals
-Here i keep my tasks from SoftUni-fundamentals course.
+
+Here are my tasks from SoftUni-Fundamentals course.
