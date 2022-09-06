@@ -12,7 +12,7 @@ function rightPlace(string, char, match) {
   if (match == matched) {
     console.log("Matched");
   } else {
-    console.log("Not matched");
+    console.log("Not Matched");
   }
 }
 
