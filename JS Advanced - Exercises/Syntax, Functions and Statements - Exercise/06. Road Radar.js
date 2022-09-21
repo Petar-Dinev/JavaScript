@@ -12,9 +12,9 @@ function roadRadar(speed, area) {
   if (speed <= areaLimit) {
     console.log(`Driving ${speed} km/h in a ${areaLimit} zone`);
   } else {
-    if (diffInSpeed < 20) {
+    if (diffInSpeed <= 20) {
       status = "speeding";
-    } else if (diffInSpeed < 40) {
+    } else if (diffInSpeed <= 40) {
       status = "excessive speeding";
     } else {
       status = "reckless driving";
