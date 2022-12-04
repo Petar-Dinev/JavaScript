@@ -8,7 +8,12 @@ function hospital(input) {
   let checkPatients = 0;
   let uncheckPatients = 0;
 
-  for (let i = 0; i < days; i++) {
+  for (let i = 1; i <= days; i++) {
+    if (i % 3 == 0) {
+      if (checkPatients < uncheckPatients) {
+        doctors++;
+      }
+    }
     let currentUncheckPatients = currentPatients - doctors;
     if (currentUncheckPatients > 0) {
       uncheckPatients += currentUncheckPatients;
@@ -17,9 +22,6 @@ function hospital(input) {
       checkPatients += doctors;
     } else {
       checkPatients += currentPatients;
-    }
-    if (checkPatients < uncheckPatients) {
-      doctors++;
     }
     currentPatients = Number(input[index]);
     index++;
@@ -30,3 +32,4 @@ function hospital(input) {
 }
 
 hospital(["6", " 25", " 25", " 25", "25", " 25", "2"]);
+// hospital(["3", '7', "7", "7"])
