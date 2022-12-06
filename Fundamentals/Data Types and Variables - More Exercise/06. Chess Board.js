@@ -1,5 +1,4 @@
 function chessBoard(num) {
-  
   let result = '<div class="chessboard">';
   for (let i = 0; i < num; i++) {
     result += "\n" + "  <div>";
@@ -17,7 +16,6 @@ function chessBoard(num) {
           result += "\n" + '    <span class="black"></span>';
         }
       }
-    
     }
     result += "\n" + "  </div>";
   }
