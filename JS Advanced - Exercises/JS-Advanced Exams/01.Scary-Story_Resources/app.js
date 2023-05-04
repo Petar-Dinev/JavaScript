@@ -8,7 +8,6 @@ function solve() {
   const genreInput = document.getElementById("genre");
   const storyInput = document.getElementById("story");
   const publishBtn = document.getElementById("form-btn");
-  const form = document.querySelector("form");
   const previewSection = document.getElementById("preview-list");
   publishBtn.addEventListener("click", onPublish);
   const mainDiv = document.getElementById("main");
@@ -31,17 +30,19 @@ function solve() {
       values.title &&
       values.story
     ) {
-      const li = createEl("li", null, "story-info");
+
+      const li = createEl("li", '', "story-info");
       const article = createEl("article");
       const h4 = createEl("h4", `Name: ${values.firstName} ${values.lastName}`);
+      article.appendChild(h4)
       const p1 = createEl("p", `Age: ${values.age}`);
-      li.appendChild(p1);
+      article.appendChild(p1);
       const p2 = createEl("p", `Title: ${values.title}`);
-      li.appendChild(p2);
+      article.appendChild(p2);
       const p3 = createEl("p", `Genre: ${values.genre}`);
-      li.appendChild(p3);
+      article.appendChild(p3);
       const p4 = createEl("p", values.story);
-      li.appendChild(p4);
+      article.appendChild(p4);
       li.appendChild(article);
       const saveBtn = createEl("button", "Save Story", "save-btn");
       const editBtn = createEl("button", "Edit Story", "edit-btn");
