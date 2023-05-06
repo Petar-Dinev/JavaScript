@@ -11,10 +11,10 @@ describe("test lookupChar functionality", () => {
   it("should return undefined if second param is float point", () => {
     expect(lookupChar("Pesho", 0.1)).to.be.undefined;
   });
-  it("scheck valuer with index bigger from string length", () => {
+  it("check value with index bigger from string length", () => {
     expect(lookupChar("Pesho", 10)).to.equal("Incorrect index");
   });
-  it("check valuer with negative index", () => {
+  it("check value with negative index", () => {
     expect(lookupChar("Pesho", -10)).to.equal("Incorrect index");
   });
   it("check value with valid params", () => {

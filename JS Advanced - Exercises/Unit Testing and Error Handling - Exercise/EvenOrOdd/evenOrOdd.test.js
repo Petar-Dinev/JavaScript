@@ -1,9 +1,9 @@
 let { expect } = require("chai");
-let { isOddOrEven } = require("../02. Even Or Odd");
+let { isOddOrEven } = require("./02. Even Or Odd");
 
 describe("test isOddOrEven functionality", () => {
   it("should return undefined with num param", () => {
-    expect(isOddOrEven(n)).to.be.undefined;
+    expect(isOddOrEven(1)).to.be.undefined;
   });
   it("should return undefined with array param", () => {
     expect(isOddOrEven([])).to.be.undefined;
