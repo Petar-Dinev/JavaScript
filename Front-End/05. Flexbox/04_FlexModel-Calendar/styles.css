@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+div, section {
+    display: flex;
+    align-items: center;
+}
+
+div {
+    max-width: 65vw;
+}
+
+span {
+    text-align: center;
+    border: 1px solid black;
+    min-height: 6em;
+}
+
+.week span {
+    padding-top: 1em ;
+}
+
+.notes {
+    flex-direction: column;
+}
+
+.notes span {
+    min-height: 12em;
+    min-width: 9em;
+    flex: 1 0 auto;
+}
+
+.week {
+    flex-wrap: wrap;
+}
+.week span {
+ flex: 1 0 auto;
+}
+.week span:first-child, .week span:nth-child(7) {
+    flex-basis: 100%;
+}
+.week span:nth-child(8), .week span:nth-child(9) {
+   width: 50%;
+}
