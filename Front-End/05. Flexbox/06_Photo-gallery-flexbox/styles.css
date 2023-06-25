@@ -1,0 +1,40 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body,
+ul,
+li {
+    display: flex;
+}
+
+body {
+    background-color: #eee;
+    padding: 2em;
+}
+
+ul {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2em;
+}
+
+li {
+    flex: 0 0 15em;
+    align-items: center;
+    border: 0.5em solid #000;
+    background-color: #fff;
+    padding: 0.5em;
+    box-shadow: 
+    0 0 0.5em 0 rgba(0, 0, 0, 0.3) inset,
+    0 0 1em 0 rgba(0, 0, 0, 0.4);
+    border-radius: 0.10em;
+}
+
+li img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
