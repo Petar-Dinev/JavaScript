@@ -1,0 +1,15 @@
+{
+  "name": "03.-car-service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "03. Car Service_Resources.js",
+  "scripts": {
+    "test": "mocha carService.test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.3.7"
+  }
+}
