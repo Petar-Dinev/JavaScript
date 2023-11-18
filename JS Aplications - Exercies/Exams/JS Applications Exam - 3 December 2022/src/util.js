@@ -1,0 +1,20 @@
+export function setUserData (data) {
+   sessionStorage.setItem("userData", JSON.stringify(data));
+}
+export function getUserData () {
+  const user = JSON.parse(sessionStorage.getItem("userData"));
+  return user;
+}
+export function clearUserData () {
+  sessionStorage.removeItem("userData");
+}
+
+export function createSubmitHandler(callback) {
+  return function(e) {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+    const data = Object.fromEntries(formData);
+
+    callback(data)
+  }
+}
