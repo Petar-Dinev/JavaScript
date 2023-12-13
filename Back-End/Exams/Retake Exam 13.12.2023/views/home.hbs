@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="course-message">
+        <h1 id="site-title">Course Book</h1>
+        <h2 id="site-mid-title">Show your opportunities!</h2>
+    </div>
+    {{#if courses}}
+    <div class="last-course">
+        {{#each courses}}
+        <div class="info">
+            <h2 class="title">{{title}}</h2>
+            <h4 class="genre">Type: {{type}}</h4>
+            <h4 class="certificate">Certificate: {{certificate}}</h4>
+            <h4 class="price">Price: €{{price}}</h4>
+            <div class="learn-more">
+                <a href="/courses/{{_id}}">Learn More...</a>
+            </div>
+        </div>
+        {{/each}}
+
+
+    </div>
+    {{else}}
+    <!-- If there are still no course posts on the database -->
+    <article class="not-available-course">
+        <h1>No course created yet.</h1>
+    </article>
+    {{/if}}
+</div>

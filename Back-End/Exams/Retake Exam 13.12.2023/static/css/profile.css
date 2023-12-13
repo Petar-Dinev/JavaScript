@@ -1,0 +1,140 @@
+#user {
+  width: 50%;
+  background-color: rgba(255, 255, 255, 0.551);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+
+.user-logo img {
+  display: inline-block;
+  margin-left: 40%;
+  width: 20%;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.user-info h1 {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 10px;
+}
+
+.user-info .created-course-count {
+  text-align: center;
+  font-size: 22px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+.user-info .sign-course-count {
+  text-align: center;
+  font-size: 22px;
+  padding-bottom: 10px;
+  font-style: italic;
+}
+
+.profile-course {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 2%;
+}
+
+.profile-course .sign-course,
+.created-course {
+  margin: 4px, 4px;
+  padding: 4px;
+  background-color: rgba(255, 255, 255, 0.551);
+  border-radius: 20px;
+  width: 500px;
+  height: 400px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align: justify;
+}
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #262322;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ffeae7;
+}
+
+.profile-course .sign-course .section-title {
+  text-align: center;
+  color: black;
+}
+
+.profile-course .created-course .section-title {
+  text-align: center;
+  color: black;
+}
+
+.profile-course .info {
+  padding: 20px;
+  margin-top: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  background-color: rgba(255, 255, 255, 0.853);
+  border-radius: 10%;
+  color: black;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.profile-course .title {
+  font-size: 22px;
+  text-align: center;
+  height: 40%;
+  margin-bottom: 20px;
+  border-bottom: 1px solid black;
+}
+
+.profile-course .author {
+  font-size: 16px;
+}
+
+.profile-course .genre {
+  text-align: left;
+}
+
+.profile-course .learn-more {
+  background-color: #262322;
+  border-radius: 10px;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.profile-course a {
+  text-decoration: none;
+  font-size: 14px;
+  color: white;
+  font-weight: bold;
+}
+
+.no-course-in-profile {
+  font-style: italic;
+  text-decoration: underline;
+  text-align: center;
+  margin-top: 30px;
+}

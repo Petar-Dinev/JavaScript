@@ -1,0 +1,49 @@
+<section id="user">
+    <div class="user-info">
+        <div class="user-logo">
+            <img src="https://ps.w.org/user-avatar-reloaded/assets/icon-256x256.png?rev=2540745">
+        </div>
+        <h1 class="user-email">{{user.email}}</h1>
+        <h2 class="created-course-count">Total Created Course: {{ownCourses.length}}</h2>
+        <h2 class="sign-course-count">Total Sign up Course: {{signedCourses.length}}</h2>
+    </div>
+</section>
+<section class="profile-course">
+    <div class="created-course">
+        <h2 class="section-title">Created Course</h2>
+
+        {{#each ownCourses}}
+        <div class="info">
+            <h2 class="title">{{title}}</h2>
+            <h4 class="genre">Type: {{type}}</h4>
+            <div class="learn-more">
+                <a href="/courses/{{_id}}">Learn More...</a>
+            </div>
+        </div>
+        {{else}}
+
+        <!-- If there are no created course -->
+        <h2 class="no-course-in-profile">You haven't created a course yet...</h2>
+        {{/each}}
+
+    </div>
+
+    <div class="sign-course">
+        <h2 class="section-title">Sign Up Course</h2>
+        {{#each signedCourses}}
+        <div class="info">
+            <h2 class="title">{{title}}</h2>
+            <h4 class="genre">Type: {{type}}</h4>
+            <h4 class="certificate">Certificate: {{certificate}}</h4>
+            <div class="learn-more">
+                <a href="/courses/{{_id}}">Learn More...</a>
+            </div>
+        </div>
+        {{else}}
+
+
+        <h2 class="no-course-in-profile">You haven't signed up for any course yet...</h2>
+        {{/each}}
+    </div>
+
+</section>
