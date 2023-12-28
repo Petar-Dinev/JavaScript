@@ -590,7 +590,7 @@ describe('E2E tests', function () {
         });
     });
 
-    describe.only('BONUS : Like functionality  [ 15 Points ]', async () => {
+    describe('BONUS : Like functionality  [ 15 Points ]', async () => {
 
         it('Like button is NOT visible for guest users [ 2.5 Points ]', async () => {
             await page.goto(host);
@@ -701,6 +701,7 @@ describe('E2E tests', function () {
                 onRequest,
                 page.click('.btn-like')
             ]);
+            
 
             await page.waitForTimeout(interval);
 
@@ -746,7 +747,6 @@ describe('E2E tests', function () {
                 onRequest(),
                 page.click('.btn-like')
             ]);
-
             await page.waitForTimeout(interval);
 
             likes = await page.$$eval('.likes', t => t.map(s => s.textContent));

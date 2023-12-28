@@ -34,16 +34,14 @@ const detailsTemplate = (
                     >Delete</a
                   >
                   <a class="btn-edit" href="/${theater._id}/edit">Edit</a>`
-              : html`
-                  ${canLike
-                    ? html`<a
-                        class="btn-like"
-                        href="javascript:void(0)"
-                        @click=${onMakeLike}
-                        >Like</a
-                      >`
-                    : ""}
-                `}
+              : html` ${canLike
+                  ? html`<a
+                      class="btn-like"
+                      href="javascript:void(0)"
+                      @click=${onMakeLike}
+                      >Like</a
+                    >`
+                  : ""}`}
           </div>`
         : ""}
       <p class="likes">Likes: ${likes}</p>
@@ -60,10 +58,13 @@ export async function showDetails(ctx) {
   const isOwner = theater._ownerId == userId;
   const canLike = !(await getMyLikes(theaterId, userId));
 
-  console.log(hasUser);
-  console.log(likes);
-  console.log(isOwner);
-  console.log(canLike);
+  // console.log(hasUser);
+  // console.log(theaterId);
+  // console.log(userId);
+  // console.log(theater);
+  // console.log(likes);
+  // console.log(isOwner);
+  // console.log(canLike);
 
   ctx.render(
     detailsTemplate(
@@ -91,7 +92,7 @@ export async function showDetails(ctx) {
 
   async function onMakeLike() {
     try {
-      await makeLike(theaterId);
+      await makeLike(theater._id);
       ctx.page.redirect("/" + theaterId);
     } catch (err) {
       alert(err);

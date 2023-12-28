@@ -42,6 +42,5 @@ const theaterTemplate = (theater) => html`<div class="eventsInfo">
 
 export async function showHome(ctx) {
   const theaters = await getAllTheaters();
-  console.log(theaters);
   ctx.render(homeTemplate(theaters));
 }

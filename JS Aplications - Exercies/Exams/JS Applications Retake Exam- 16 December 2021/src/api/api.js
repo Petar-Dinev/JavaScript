@@ -36,8 +36,8 @@ async function request(method, url, data) {
 
     return result;
   } catch (err) {
-    console.log(err.message);
-    throw err;
+    console.log(err);
+    // throw err;
   }
 }
 
