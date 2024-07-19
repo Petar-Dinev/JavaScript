@@ -1,0 +1,16 @@
+{
+  "name": "03.food-delivery",
+  "version": "1.0.0",
+  "main": "food delivery.js",
+  "type": "module",
+  "scripts": {
+    "test": "mocha ./foodDelivery.test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "chai": "^5.2.0"
+  }
+}
