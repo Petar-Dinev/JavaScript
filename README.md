@@ -1,3 +1,3 @@
 # JavaScript
 
-Here are my tasks from each learning course from the JavaScript track.
+Here are my tasks from all JavaScript courses in SoftUni university.
